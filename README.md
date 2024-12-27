@@ -1,3 +1,8 @@
+<p align="center">
+<img
+src='https://github.com/BolaGamal/SampleOTP/blob/master/Example/SampleOTP/Images.xcassets/sampleOTP.imageset/sampleOTP.png' width="400" />
+</р>
+
 # SampleOTP
 
 [![CI Status](https://img.shields.io/travis/BolaGamal/SampleOTP.svg?style=flat)](https://travis-ci.org/BolaGamal/SampleOTP)
