@@ -18,8 +18,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 `SampleOTP` is a Swift library designed to simplify the implementation of One-Time Password (OTP) input fields in iOS applications. It provides a customizable and user-friendly UI model that enhances the user experience during OTP entry.
 
-![sampleotp](https://github.com/user-attachments/assets/65e1c9de-c2c1-40d0-b733-60753d635de5)
-
+![sampleOtpGif](https://github.com/user-attachments/assets/a25d0622-e235-4ac4-89a0-56c7aa1a431c)
 
 ## Features
 
