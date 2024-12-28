@@ -60,7 +60,7 @@ let otpViewModel = SampleOTPViewUIModel(
 ```
 ## Installation
 
-SampleOTP is available through [CocoaPods](https://cocoapods.org). To install
+SampleOTP is available through [CocoaPods](https://cocoapods.org/pods/SampleOTP). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
