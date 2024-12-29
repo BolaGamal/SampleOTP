@@ -34,3 +34,21 @@ Carthage/Build
 # `pod install` in .travis.yml
 #
 # Pods/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Build artifacts
+*.xcworkspace
+*.xcodeproj
+*.xcuserdata
+DerivedData/
+build/
+
+# Other
+*.lock
+
+# CocoaPods Workspace
+*.xcworkspace/
+
