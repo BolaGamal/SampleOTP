@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04687F672D219D2400F4744D /* sampleOtpGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 04687F662D219D2400F4744D /* sampleOtpGif.gif */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		01AE13C3F8803B3DC1350A6B /* SampleOTP.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SampleOTP.podspec; path = ../SampleOTP.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		04687F662D219D2400F4744D /* sampleOtpGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sampleOtpGif.gif; sourceTree = "<group>"; };
 		1253223B0F4B71930A4A855E /* Pods_SampleOTP_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleOTP_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A1B86EF45F1DEF44E26D825 /* Pods-SampleOTP_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleOTP_Example.debug.xcconfig"; path = "Target Support Files/Pods-SampleOTP_Example/Pods-SampleOTP_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SampleOTP_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleOTP_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04687F682D219D3A00F4744D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04687F662D219D2400F4744D /* sampleOtpGif.gif */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		22D70B9FA887E21D759E9812 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				04687F682D219D3A00F4744D /* Resources */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for SampleOTP";
@@ -250,6 +261,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				04687F672D219D2400F4744D /* sampleOtpGif.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
