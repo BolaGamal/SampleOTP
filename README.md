@@ -1,6 +1,6 @@
 <p align="center">
 <img
-src='https://github.com/BolaGamal/SampleOTP/blob/master/Example/SampleOTP/Images.xcassets/sampleOTP.imageset/sampleOTP.png' width="400" />
+src='https://github.com/BolaGamal/SampleOTP/blob/master/Example/SampleOTP/Images.xcassets/sampleOTP.imageset/sampleOTP.png' width="200" />
 </р>
 
 # SampleOTP
@@ -9,10 +9,6 @@ src='https://github.com/BolaGamal/SampleOTP/blob/master/Example/SampleOTP/Images
 [![Version](https://img.shields.io/cocoapods/v/SampleOTP.svg?style=flat)](https://cocoapods.org/pods/SampleOTP)
 [![License](https://img.shields.io/cocoapods/l/SampleOTP.svg?style=flat)](https://cocoapods.org/pods/SampleOTP)
 [![Platform](https://img.shields.io/cocoapods/p/SampleOTP.svg?style=flat)](https://cocoapods.org/pods/SampleOTP)
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Overview
 
@@ -68,6 +64,10 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'SampleOTP'
 ```
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Author
 
