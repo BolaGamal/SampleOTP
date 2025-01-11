@@ -1,6 +1,6 @@
 <p align="center">
 <img
-src='https://github.com/BolaGamal/SampleOTP/blob/master/Example/SampleOTP/Images.xcassets/sampleOTP.imageset/sampleOTP.png' width="200" />
+src='https://github.com/BolaGamal/SampleOTP/blob/master/Example/SampleOTP/Images.xcassets/sampleOTP.imageset/sampleOTP.png' width="350" />
 </р>
 
 # SampleOTP
