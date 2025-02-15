@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SampleOTP'
-  s.version          = '0.2.1'
+  s.version          = '0.2.2'
   s.summary          = 'A library for handling OTP (One-Time Password) generation.'
   s.description      = 'This library provides functionalities to generate and validate OTPs in iOS applications.'
   s.homepage         = 'https://github.com/BolaGamal/SampleOTP'

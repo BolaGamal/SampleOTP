@@ -123,14 +123,14 @@ extension SampleOTPView {
     private func moveFocusToPreviousField(for textField: SampleOTPTextField) {
         if let previousFieldIndex = textFields.firstIndex(of: textField), previousFieldIndex > 0 {
             let previousField = textFields[previousFieldIndex - 1]
+            previousField.text = ""
             previousField.becomeFirstResponder()
         }
     }
     
-    private func changeStyleForFirstActiveStyleField() {
-        guard let firstField = textFields.first,
-              let typingStyle = styleHandler?.getTypingStyle, typingStyle == .active else { return }
-        self.styleHandler?.applyStyle(to: firstField, isFocused: false)
+    private func changeStyleForActiveField(for textField: SampleOTPTextField) {
+        guard let typingStyle = styleHandler?.getTypingStyle, typingStyle == .active else { return }
+        self.styleHandler?.applyStyle(to: textField, isFocused: false)
     }
 }
 
@@ -249,9 +249,10 @@ extension SampleOTPView: UITextFieldDelegate {
 extension SampleOTPView: SampleOTPTextFieldDelegate {
     
     func textFieldDidEnterBackspace(_ textField: SampleOTPTextField) {
+        let text = textField.text
         textField.text = ""
-        moveFocusToPreviousField(for: textField)
-        changeStyleForFirstActiveStyleField()
+        if text?.isEmpty ?? true { moveFocusToPreviousField(for: textField) }
+        changeStyleForActiveField(for: textField)
     }
 }
 
