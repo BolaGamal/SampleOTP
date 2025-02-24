@@ -67,13 +67,13 @@ extension SampleOTPView {
         let textField = SampleOTPTextField()
         textField.delegate = self
         textField.otpTextFieldDelegate = self
+        textField.font = uiModel.font
         textField.textAlignment = .center
         textField.textColor = uiModel.textColor
         textField.placeholder = uiModel.placeholder
         textField.keyboardType = .asciiCapableNumberPad
         textField.isSecureTextEntry = uiModel.isSecureTextEntry
         textField.backgroundColor = uiModel.fieldBackgroundColor
-        textField.font = UIFont.systemFont(ofSize: uiModel.fontSize)
         textField.layer.borderWidth = uiModel.borderWidth
         textField.layer.borderColor = uiModel.borderColor.cgColor
         textField.layer.cornerRadius = uiModel.fieldCornerRadius

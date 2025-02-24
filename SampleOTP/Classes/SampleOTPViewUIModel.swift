@@ -23,7 +23,7 @@ public struct SampleOTPViewUIModel {
     public let textColor: UIColor
     public let isSecureTextEntry: Bool
     public let placeholder: String
-    public let fontSize: CGFloat
+    public let font: UIFont
     public let borderWidth: CGFloat
     public let borderColor: UIColor
     public let fieldCornerRadius: CGFloat
@@ -44,11 +44,11 @@ public struct SampleOTPViewUIModel {
         textColor: UIColor = .black,
         isSecureTextEntry: Bool = false,
         placeholder: String = "",
-        fontSize: CGFloat = 18.0,
-        borderWidth: CGFloat = 1.5,
+        font: UIFont = UIFont.systemFont(ofSize: 18),
+        borderWidth: CGFloat = 0,
         borderColor: UIColor = .clear,
         fieldCornerRadius: CGFloat = 6,
-        fieldBackgroundColor: UIColor = .white,
+        fieldBackgroundColor: UIColor = .clear,
         animationOTP: AnimationOTP? = nil,
         typingOTPStyle: TypingOTPStyle? = nil,
         activeTextColor: UIColor? = nil,
@@ -62,7 +62,7 @@ public struct SampleOTPViewUIModel {
         self.textColor = textColor
         self.isSecureTextEntry = isSecureTextEntry
         self.placeholder = placeholder
-        self.fontSize = fontSize
+        self.font = font
         self.borderWidth = borderWidth
         self.borderColor = borderColor
         self.fieldBackgroundColor = fieldBackgroundColor
