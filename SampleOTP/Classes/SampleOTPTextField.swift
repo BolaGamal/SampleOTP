@@ -20,4 +20,18 @@ class SampleOTPTextField: UITextField {
     override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         return action == #selector(UIResponderStandardEditActions.paste(_:))
     }
+    
+}
+
+//MARK: - Helper Methods
+extension SampleOTPTextField {
+    
+    func setPlaceholderColor(_ uiModel: SampleOTPViewUIModel) {
+        if let placeholderColor = uiModel.placeholderColor {
+            let attributes: [NSAttributedString.Key: Any] = [
+                .foregroundColor: placeholderColor,
+                .font: uiModel.font]
+            attributedPlaceholder = NSAttributedString(string: placeholder ?? "", attributes: attributes)
+        }
+    }
 }

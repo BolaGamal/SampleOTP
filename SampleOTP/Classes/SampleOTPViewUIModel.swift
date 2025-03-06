@@ -7,11 +7,12 @@
 
 import UIKit
 
-
+//MARK: Typing Styles
 public enum TypingOTPStyle {
     case active, focused
 }
 
+//MARK: - UIModel
 public struct SampleOTPViewUIModel {
     
     public enum AnimationOTP {
@@ -20,14 +21,20 @@ public struct SampleOTPViewUIModel {
     
     public let length: Int
     public let space: CGFloat
+    
+    //textField attribute
+    public let font: UIFont
     public let textColor: UIColor
+    public var tintColor: UIColor?
     public let isSecureTextEntry: Bool
     public let placeholder: String
-    public let font: UIFont
+    public var placeholderColor: UIColor?
     public let borderWidth: CGFloat
     public let borderColor: UIColor
     public let fieldCornerRadius: CGFloat
     public let fieldBackgroundColor: UIColor
+    
+    //animation
     public let animationOTP: AnimationOTP?
     
     //active style
@@ -41,10 +48,12 @@ public struct SampleOTPViewUIModel {
     public init(
         length: Int = 5,
         space: CGFloat = 10,
+        font: UIFont = UIFont.systemFont(ofSize: 18),
         textColor: UIColor = .black,
+        tintColor: UIColor? = nil,
         isSecureTextEntry: Bool = false,
         placeholder: String = "",
-        font: UIFont = UIFont.systemFont(ofSize: 18),
+        placeholderColor: UIColor? = nil,
         borderWidth: CGFloat = 0,
         borderColor: UIColor = .clear,
         fieldCornerRadius: CGFloat = 6,
@@ -59,14 +68,16 @@ public struct SampleOTPViewUIModel {
     {
         self.length = length
         self.space = space
+        self.font = font
         self.textColor = textColor
+        self.tintColor = tintColor
         self.isSecureTextEntry = isSecureTextEntry
         self.placeholder = placeholder
-        self.font = font
+        self.placeholderColor = placeholderColor
         self.borderWidth = borderWidth
         self.borderColor = borderColor
-        self.fieldBackgroundColor = fieldBackgroundColor
         self.fieldCornerRadius = fieldCornerRadius
+        self.fieldBackgroundColor = fieldBackgroundColor
         self.animationOTP = animationOTP
         self.typingOTPStyle = typingOTPStyle
         self.activeTextColor = activeTextColor ?? self.textColor

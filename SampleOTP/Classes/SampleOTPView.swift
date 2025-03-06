@@ -77,6 +77,8 @@ extension SampleOTPView {
         textField.layer.borderWidth = uiModel.borderWidth
         textField.layer.borderColor = uiModel.borderColor.cgColor
         textField.layer.cornerRadius = uiModel.fieldCornerRadius
+        textField.setPlaceholderColor(uiModel)
+        if let tintColor = uiModel.tintColor { textField.tintColor = tintColor }
         textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         return textField
     }
