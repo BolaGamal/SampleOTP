@@ -28,6 +28,7 @@ public struct SampleOTPViewUIModel {
     public var tintColor: UIColor?
     public let isSecureTextEntry: Bool
     public let placeholder: String
+    public var placeholderFont: UIFont?
     public var placeholderColor: UIColor?
     public let borderWidth: CGFloat
     public let borderColor: UIColor
@@ -53,6 +54,7 @@ public struct SampleOTPViewUIModel {
         tintColor: UIColor? = nil,
         isSecureTextEntry: Bool = false,
         placeholder: String = "",
+        placeholderFont: UIFont? = nil,
         placeholderColor: UIColor? = nil,
         borderWidth: CGFloat = 0,
         borderColor: UIColor = .clear,
@@ -73,6 +75,7 @@ public struct SampleOTPViewUIModel {
         self.tintColor = tintColor
         self.isSecureTextEntry = isSecureTextEntry
         self.placeholder = placeholder
+        self.placeholderFont = placeholderFont
         self.placeholderColor = placeholderColor
         self.borderWidth = borderWidth
         self.borderColor = borderColor

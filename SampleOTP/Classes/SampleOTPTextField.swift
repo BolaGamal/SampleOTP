@@ -26,12 +26,20 @@ class SampleOTPTextField: UITextField {
 //MARK: - Helper Methods
 extension SampleOTPTextField {
     
-    func setPlaceholderColor(_ uiModel: SampleOTPViewUIModel) {
-        if let placeholderColor = uiModel.placeholderColor {
-            let attributes: [NSAttributedString.Key: Any] = [
-                .foregroundColor: placeholderColor,
-                .font: uiModel.font]
-            attributedPlaceholder = NSAttributedString(string: placeholder ?? "", attributes: attributes)
+    func setAttributedPlaceholder(_ uiModel: SampleOTPViewUIModel) {
+        guard uiModel.placeholderColor != nil ||
+        uiModel.placeholderFont != nil else { return }
+        
+        var attributes: [NSAttributedString.Key: Any] = [:]
+        
+        if let placeholderFont = uiModel.placeholderFont {
+            attributes[.font] = placeholderFont
         }
+        
+        if let placeholderColor = uiModel.placeholderColor {
+            attributes[.foregroundColor] = placeholderColor
+        }
+        
+        attributedPlaceholder = NSAttributedString(string: placeholder ?? "", attributes: attributes)
     }
 }
