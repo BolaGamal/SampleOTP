@@ -47,12 +47,13 @@ class ViewController: UIViewController {
 extension ViewController {
     
     private func testBasicOTP() {
-        basicOTP.configure(with: SampleOTPViewUIModel())
+        basicOTP.configure(with: SampleOTPViewUIModel(fieldBackgroundColor: .white))
     }
     
     private func testFocusedOTP() {
         focusedOTP.configure(
             with: SampleOTPViewUIModel(
+                fieldBackgroundColor: .white,
                 typingOTPStyle: .focused,
                 activeBorderColor: .red)
         )
@@ -61,6 +62,7 @@ extension ViewController {
     private func testActiveOTP() {
         activeOTP.configure(
             with: SampleOTPViewUIModel(
+                fieldBackgroundColor: .white,
                 typingOTPStyle: .active,
                 activeTextColor: .white,
                 activeFieldBackgroundColor: .purple)
@@ -70,6 +72,7 @@ extension ViewController {
     private func testBounceAnimationOTP() {
         animationOTP1.configure(
             with: SampleOTPViewUIModel(
+                fieldBackgroundColor: .white,
                 animationOTP: .bounce,
                 typingOTPStyle: .active,
                 activeTextColor: .white,
@@ -80,6 +83,7 @@ extension ViewController {
     private func testFadeInAnimationOTP() {
         animationOTP2.configure(
             with: SampleOTPViewUIModel(
+                fieldBackgroundColor: .white,
                 animationOTP: .fadeIn,
                 typingOTPStyle: .active,
                 activeTextColor: .white,
@@ -90,6 +94,7 @@ extension ViewController {
     private func testPulseAnimationOTP() {
         animationOTP3.configure(
             with: SampleOTPViewUIModel(
+                fieldBackgroundColor: .white,
                 animationOTP: .pulse,
                 typingOTPStyle: .active,
                 activeTextColor: .white,

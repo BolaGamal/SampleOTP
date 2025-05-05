@@ -5,9 +5,10 @@ src='https://github.com/BolaGamal/SampleOTP/blob/master/Example/SampleOTP/Images
 
 # SampleOTP
 
-[![CI Status](https://img.shields.io/travis/BolaGamal/SampleOTP.svg?style=flat)](https://travis-ci.org/BolaGamal/SampleOTP)
-[![Version](https://img.shields.io/cocoapods/v/SampleOTP.svg?style=flat)](https://cocoapods.org/pods/SampleOTP)
-[![License](https://img.shields.io/cocoapods/l/SampleOTP.svg?style=flat)](https://cocoapods.org/pods/SampleOTP)
+[![Build Status](https://api.travis-ci.com/BolaGamal/SampleOTP.svg?branch=master)](https://app.travis-ci.com/github/BolaGamal/SampleOTP)
+[![SwiftPM compatible](https://img.shields.io/badge/SPM-compatible-brightgreen)](https://swift.org/package-manager/)
+[![CocoaPods](https://img.shields.io/cocoapods/v/SampleOTP.svg)](https://cocoapods.org/pods/SampleOTP)
+[![License](https://img.shields.io/cocoapods/l/SampleOTP.svg?style=flat)](https://github.com/BolaGamal/SampleOTP/blob/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/SampleOTP.svg?style=flat)](https://cocoapods.org/pods/SampleOTP)
 
 ## 📌 Overview
@@ -18,32 +19,51 @@ src='https://github.com/BolaGamal/SampleOTP/blob/master/Example/SampleOTP/Images
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-- ✅ **OTP Length** – Define the number of OTP digits.
-- 🎨 **Customizable Appearance** – Adjust spacing, text color, font, and background.
-- 🔒 **Secure Entry Mode** – Option to mask OTP input.
-- ✨ **Animated Feedback** – Various animation styles (`pulse`, `fadeIn`, `bounce`).
-- 🎭 **Custom Placeholder** – Use any character or symbol as a placeholder.
-- 🎯 **Dynamic Typing Styles** – Modify field appearance when (`active`, `focused`).
-- 🛠️ **Border & Corner Customization** – Set width, color, radius for normal & active states.
+SampleOTP gives you full control over the OTP input experience, combining simplicity with deep customization:
+
+- ✅ **OTP Length** – Define how many digits the OTP should have.
+- 🔐 **Secure Input Mode** – Mask OTP characters for sensitive inputs.
+- 🎨 **Custom Appearance** – Adjust spacing, text color, font size, background color.
+- 🎭 **Placeholder Customization** – Use any symbol or character.
+- ✨ **Animation Styles** – Pulse, fadeIn, and bounce feedback animations.
+- 🛠️ **Borders & Corners** – Customize border width, color, and corner radius (both normal and active states).
+- 🎯 **Dynamic Typing Styles** – Automatically change styling when field is active or focused.
+- ☑️ **Validation Support** – Easily check OTP completeness and validity.
+- 📱 **SwiftUI Compatible** – Use with SwiftUI via a convenient wrapper.
+- 🔁 **Supports both Swift Package Manager and CocoaPods**
 
 ---
 
-## 📥 Installation
+## 📦 Installation
 
-### CocoaPods
+### 🔸 Swift Package Manager (SPM)
 
-`SampleOTP` is available via [CocoaPods](https://cocoapods.org/pods/SampleOTP).  
-To install it, simply add the following line to your `Podfile`:
+1. Open **Xcode > File > Add Packages**
+2. Enter the URL:
+
+```
+https://github.com/BolaGamal/SampleOTP.git
+```
+
+3. Choose the version and add the package.
+
+---
+
+### 🔸 CocoaPods
+
+If you prefer [CocoaPods](https://cocoapods.org/pods/SampleOTP):
+
+Add the following line to your `Podfile`:
 
 ```ruby
 pod 'SampleOTP'
 ```
 
-Then, run:
+Then run:
 
-```sh
+```bash
 pod install
 ```
 
@@ -112,6 +132,52 @@ sampleOTP.configure(with: otpViewModel)
 ```
 ---
 
+## 🧩 SwiftUI Support
+
+From iOS 13.0+, you can use `SampleOTPViewWrapper` in SwiftUI like this:
+
+```swift
+import SwiftUI
+import SampleOTP
+
+@available(iOS 13.0, *)
+struct ContentView: View {
+    var body: some View {
+        SampleOTPViewWrapper(
+            model: SampleOTPViewUIModel(
+                length: 6,
+                space: 10,
+                font: .systemFont(ofSize: 18),
+                textColor: .black,
+                tintColor: .systemBlue,
+                isSecureTextEntry: false,
+                placeholder: "-",
+                placeholderFont: .italicSystemFont(ofSize: 16),
+                placeholderColor: .gray,
+                borderWidth: 1.5,
+                borderColor: .gray,
+                fieldCornerRadius: 8,
+                fieldBackgroundColor: .white,
+                animationOTP: .pulse,
+                typingOTPStyle: .active,
+                activeTextColor: .blue,
+                activeBorderColor: .systemGreen,
+                activeBorderWidth: 2,
+                activeFieldCornerRadius: 10,
+                activeFieldBackgroundColor: .yellow.withAlphaComponent(0.2)
+            ),
+            onCompletion: { code in
+                print("Completed: \(code)")
+            }
+        )
+        .frame(height: 60)
+        .padding()
+    }
+}
+```
+
+---
+
 ## 📌 Example Project
 
 To run the example project, clone the repo and execute:
@@ -120,6 +186,14 @@ To run the example project, clone the repo and execute:
 pod install
 ```
 inside the `Example` directory.
+
+---
+
+## 💡 Compatibility
+
+- ✅ iOS 10.0+ for UIKit
+- ✅ iOS 13.0+ for SwiftUI
+- ✅ Supports both CocoaPods & Swift Package Manager (SPM)
 
 ---
 
@@ -132,4 +206,4 @@ Pola Gamal
 
 ## 📜 License
 
-`SampleOTP` is available under the MIT license. See the `LICENSE` file for more details.
+`SampleOTP` is released under the MIT License. See [LICENSE](https://github.com/BolaGamal/SampleOTP/blob/master/LICENSE) for details.

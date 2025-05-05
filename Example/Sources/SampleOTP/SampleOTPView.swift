@@ -156,7 +156,7 @@ extension SampleOTPView {
     
     public func shakeView(duration: TimeInterval = 0.5, intensity: CGFloat = 10) {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
-        animation.timingFunction = CAMediaTimingFunction(name: .linear)
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         animation.duration = duration
         animation.values = [-intensity, intensity, -intensity * 0.8, intensity * 0.8, -intensity * 0.5, intensity * 0.5, 0]
         layer.add(animation, forKey: "shake")

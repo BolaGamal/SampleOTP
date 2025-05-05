@@ -37,22 +37,3 @@ struct SampleOTPStyleHandler: SampleOTPStyleHandlerProtocol {
     }
 }
 
-//MARK: - Helper Methods
-extension SampleOTPStyleHandler {
-    
-    static func getTextFieldBorderColor(model: SampleOTPViewUIModel, isActive: Bool) -> UIColor {
-        return isActive ? model.activeBorderColor : model.borderColor
-    }
-
-    static func getTextFieldBackgroundColor(model: SampleOTPViewUIModel, isActive: Bool) -> UIColor {
-        return isActive ? model.activeFieldBackgroundColor : model.fieldBackgroundColor
-    }
-
-    static func getTextFieldCornerRadius(model: SampleOTPViewUIModel, isActive: Bool) -> CGFloat {
-        return isActive ? model.activeFieldCornerRadius : model.fieldCornerRadius
-    }
-
-    static func getTextFieldBorderWidth(model: SampleOTPViewUIModel, isActive: Bool) -> CGFloat {
-        return isActive ? model.activeBorderWidth : model.borderWidth
-    }
-}
