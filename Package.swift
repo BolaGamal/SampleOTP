@@ -1,10 +1,3 @@
-//
-//  Untitled.swift
-//  SampleOTP
-//
-//  Created by Bola Gamal on 5/5/25.
-//  Copyright © 2025 CocoaPods. All rights reserved.
-//
 
 // swift-tools-version:5.5
 import PackageDescription
