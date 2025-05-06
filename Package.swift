@@ -13,11 +13,12 @@ let package = Package(
             targets: ["SampleOTP"]
         )
     ],
-    dependencies: [],
+    dependencies: [
+        // Add external dependencies here if needed
+    ],
     targets: [
         .target(
             name: "SampleOTP",
-            dependencies: [],
             path: "Sources/SampleOTP"
         ),
         .testTarget(

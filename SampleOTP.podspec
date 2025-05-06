@@ -8,9 +8,12 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SampleOTP'
-  s.version          = '0.2.6'
-  s.summary          = 'A library for handling OTP (One-Time Password) generation.'
-  s.description      = 'This library provides functionalities to generate and validate OTPs in iOS applications.'
+  s.version          = '0.3.0'
+  s.summary          = 'A customizable OTP input field for iOS.'
+  s.description      = <<-DESC
+    SampleOTP simplifies the implementation of one-time password (OTP) input fields in iOS apps.
+    It offers a flexible, secure, and user-friendly UI model with full support for UIKit and SwiftUI.
+  DESC
   s.homepage         = 'https://github.com/BolaGamal/SampleOTP'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'BolaGamal' => 'bola.gamal222@gmail.com' }
@@ -18,7 +21,6 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://www.linkedin.com/in/pola-gamal-53438322a/'
   s.source_files     = 'Sources/SampleOTP/**/*.{swift}'
   s.swift_version    = '5.5'
-  s.platform         = :ios, '12.0'
   s.ios.deployment_target = '12.0'
   s.pod_target_xcconfig = { 'OTHER_SWIFT_FLAGS' => '-DCOCOAPODS' }
 end
