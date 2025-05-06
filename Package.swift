@@ -11,7 +11,7 @@ let package = Package(
         .library(
             name: "SampleOTP",
             targets: ["SampleOTP"]
-        ),
+        )
     ],
     dependencies: [],
     targets: [
