@@ -10,11 +10,11 @@ import UIKit
 
 public class SampleOTPView: UIView {
     // MARK: - Private Properties -
+    private let stackView = UIStackView()
     private(set) var debounceTimer: Timer?
     private(set) var styleHandler: SampleOTPStyleHandlerProtocol?
     private(set) var animationHandler: SampleOTPAnimationHandlerProtocol?
     private(set) var textFields: [SampleOTPTextField] = []
-    private let stackView = UIStackView()
     
     public var didFinishEnteringOTP: ((String) -> Void)?
     
@@ -37,11 +37,14 @@ public class SampleOTPView: UIView {
         self.styleHandler = SampleOTPStyleHandler(uiModel: uiModel)
         self.animationHandler = SampleOTPAnimationHandler(uiModel: uiModel)
         stackView.spacing = uiModel.space
-        stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        stackView.subviews.forEach { $0.removeFromSuperview() }
         textFields.removeAll()
         
         for _ in 0..<uiModel.length {
-            let textField = createTextField(using: uiModel)
+            let textField = SampleOTPTextField(uiModel: uiModel)
+            textField.delegate = self
+            textField.otpTextFieldDelegate = self
+            textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
             textFields.append(textField)
             stackView.addArrangedSubview(textField)
         }
@@ -61,26 +64,6 @@ extension SampleOTPView {
             stackView.topAnchor.constraint(equalTo: topAnchor),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
-    }
-    
-    private func createTextField(using uiModel: SampleOTPViewUIModel) -> SampleOTPTextField {
-        let textField = SampleOTPTextField()
-        textField.delegate = self
-        textField.otpTextFieldDelegate = self
-        textField.font = uiModel.font
-        textField.textAlignment = .center
-        textField.textColor = uiModel.textColor
-        textField.placeholder = uiModel.placeholder
-        textField.keyboardType = .asciiCapableNumberPad
-        textField.isSecureTextEntry = uiModel.isSecureTextEntry
-        textField.backgroundColor = uiModel.fieldBackgroundColor
-        textField.layer.borderWidth = uiModel.borderWidth
-        textField.layer.borderColor = uiModel.borderColor.cgColor
-        textField.layer.cornerRadius = uiModel.fieldCornerRadius
-        textField.setAttributedPlaceholder(uiModel)
-        if let tintColor = uiModel.tintColor { textField.tintColor = tintColor }
-        textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        return textField
     }
     
     @objc private func textFieldDidChange(_ textField: SampleOTPTextField) {
@@ -156,7 +139,6 @@ extension SampleOTPView {
     
     public func shakeView(duration: TimeInterval = 0.5, intensity: CGFloat = 10) {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         animation.duration = duration
         animation.values = [-intensity, intensity, -intensity * 0.8, intensity * 0.8, -intensity * 0.5, intensity * 0.5, 0]
         layer.add(animation, forKey: "shake")

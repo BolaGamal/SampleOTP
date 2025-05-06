@@ -9,7 +9,6 @@
 
 import UIKit
 import SwiftUI
-import SampleOTP
 
 public struct SampleOTPViewWrapper: UIViewRepresentable {
     public var model: SampleOTPViewUIModel

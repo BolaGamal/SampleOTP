@@ -12,13 +12,13 @@ final class SampleOTPViewUIModelTests: XCTestCase {
             isSecureTextEntry: true,
             placeholder: "-",
             borderWidth: 1,
-            borderColor: .gray,
+            borderColor: UIColor.gray.cgColor,
             fieldCornerRadius: 6,
             fieldBackgroundColor: .white,
             animationOTP: .none,
             typingOTPStyle: .active,
             activeTextColor: .blue,
-            activeBorderColor: .green,
+            activeBorderColor: UIColor.green.cgColor,
             activeBorderWidth: 2,
             activeFieldCornerRadius: 8,
             activeFieldBackgroundColor: .lightGray
@@ -34,11 +34,11 @@ final class SampleOTPViewUIModelTests: XCTestCase {
     func testFallbacksFromMainStyleProperties() {
         let model = SampleOTPViewUIModel(
             textColor: .red,
-            borderColor: .blue
+            borderColor: UIColor.blue.cgColor
         )
 
         XCTAssertEqual(model.activeTextColor, .red)
-        XCTAssertEqual(model.activeBorderColor, .blue)
+        XCTAssertEqual(model.activeBorderColor, UIColor.blue.cgColor)
         XCTAssertEqual(model.activeBorderWidth, model.borderWidth)
         XCTAssertEqual(model.activeFieldCornerRadius, model.fieldCornerRadius)
         XCTAssertEqual(model.activeFieldBackgroundColor, model.fieldBackgroundColor)

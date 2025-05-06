@@ -4,8 +4,8 @@ import XCTest
 final class SampleOTPStyleHandlerTests: XCTestCase {
 
     func testGetTextFieldBorderColorWhenActiveAndInactive() {
-        let activeColor = UIColor.green
-        let inactiveColor = UIColor.gray
+        let activeColor = UIColor.green.cgColor
+        let inactiveColor = UIColor.gray.cgColor
         let model = SampleOTPViewUIModel(
             borderColor: inactiveColor,
             activeBorderColor: activeColor

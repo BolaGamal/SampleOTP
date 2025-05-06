@@ -53,9 +53,10 @@ extension ViewController {
     private func testFocusedOTP() {
         focusedOTP.configure(
             with: SampleOTPViewUIModel(
+                borderWidth: 1,
                 fieldBackgroundColor: .white,
                 typingOTPStyle: .focused,
-                activeBorderColor: .red)
+                activeBorderColor: UIColor.red.cgColor)
         )
     }
     
