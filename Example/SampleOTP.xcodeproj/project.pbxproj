@@ -171,7 +171,6 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				04CF507D2DCA905100D5EBBD /* Package.swift */,
 				04051ECA2DC99D5A00451D97 /* Tests */,
 				041262032DC990E300737FFD /* Sources */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
@@ -218,6 +217,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				04CF507D2DCA905100D5EBBD /* Package.swift */,
 				01AE13C3F8803B3DC1350A6B /* SampleOTP.podspec */,
 				625B4CAD85FA61CD74101E8F /* README.md */,
 				83D40776495930CA6C589484 /* LICENSE */,
