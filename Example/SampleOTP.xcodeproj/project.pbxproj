@@ -47,7 +47,6 @@
 		04051EC42DC99D5A00451D97 /* SampleOTPTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleOTPTextFieldTests.swift; sourceTree = "<group>"; };
 		04051EC52DC99D5A00451D97 /* SampleOTPViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleOTPViewTests.swift; sourceTree = "<group>"; };
 		04051EC62DC99D5A00451D97 /* SampleOTPViewUIModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleOTPViewUIModelTests.swift; sourceTree = "<group>"; };
-		04051ED42DC9A43300451D97 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = SOURCE_ROOT; };
 		041261FB2DC990E300737FFD /* Contract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
 		041261FC2DC990E300737FFD /* SampleOTPAnimationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleOTPAnimationHandler.swift; sourceTree = "<group>"; };
 		041261FD2DC990E300737FFD /* SampleOTPStyleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleOTPStyleHandler.swift; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		0425B8172DCA538E0024D2C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04687F662D219D2400F4744D /* sampleOtpGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sampleOtpGif.gif; sourceTree = "<group>"; };
 		04A8CB0F2DC919E3000A5E77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04FCEB872DCA6EF700558080 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = SOURCE_ROOT; };
 		0815E9AD3C0B48376781F9E4 /* Pods_SampleOTP_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleOTP_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EE3804EB1D74178A5BA03B /* Pods-SampleOTP_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleOTP_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SampleOTP_Tests/Pods-SampleOTP_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		27098B9D4CD34376712A8795 /* Pods-SampleOTP_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleOTP_Tests.release.xcconfig"; path = "Target Support Files/Pods-SampleOTP_Tests/Pods-SampleOTP_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				04051ED42DC9A43300451D97 /* Package.swift */,
+				04FCEB872DCA6EF700558080 /* Package.swift */,
 				04051ECA2DC99D5A00451D97 /* Tests */,
 				041262032DC990E300737FFD /* Sources */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
