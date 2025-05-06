@@ -13,13 +13,17 @@ let package = Package(
             targets: ["SampleOTP"]
         )
     ],
-    dependencies: [
-        // Add external dependencies here if needed
-    ],
+    dependencies: [],
     targets: [
         .target(
             name: "SampleOTP",
-            path: "Sources/SampleOTP"
+            dependencies: [],
+            path: "Sources/SampleOTP",
+            exclude: [
+                "../../Example",
+                "../../SampleOTP/Classes",
+                "../../SampleOTP/Assets"
+            ]
         ),
         .testTarget(
             name: "SampleOTPTests",
