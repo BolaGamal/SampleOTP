@@ -1,6 +1,6 @@
 <p align="center">
 <img
-src='https://github.com/BolaGamal/SampleOTP/blob/master/Example/SampleOTP/Images.xcassets/sampleOTP.imageset/sampleOTP.png' width="350" />
+src='https://github.com/BolaGamal/SampleOTP/blob/master/Resources/Images.xcassets/sampleOTP.imageset/sampleOTP.png' width="350" />
 </р>
 
 # SampleOTP
@@ -15,7 +15,7 @@ src='https://github.com/BolaGamal/SampleOTP/blob/master/Example/SampleOTP/Images
 
 `SampleOTP` is a Swift library designed to simplify the implementation of One-Time Password (OTP) input fields in iOS applications. It provides a **customizable** and **user-friendly** UI model that enhances the user experience during OTP entry.
 
-![sampleOtpGif](https://github.com/BolaGamal/SampleOTP/blob/master/Example/SampleOTP/Resources/sampleOtpGif.gif)
+![sampleOtpGif](https://github.com/BolaGamal/SampleOTP/blob/master/Resources/sampleOtpGif.gif)
 
 ---
 
