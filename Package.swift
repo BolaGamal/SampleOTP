@@ -17,13 +17,7 @@ let package = Package(
     targets: [
         .target(
             name: "SampleOTP",
-            dependencies: [],
-            path: "Sources/SampleOTP",
-            exclude: [
-                "../../Example",
-                "../../SampleOTP/Classes",
-                "../../SampleOTP/Assets"
-            ]
+            path: "Sources/SampleOTP"
         ),
         .testTarget(
             name: "SampleOTPTests",

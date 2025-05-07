@@ -52,3 +52,8 @@ build/
 # CocoaPods Workspace
 *.xcworkspace/
 
+# Local Examples
+Example/
+SampleOTP/Assets/
+SampleOTP/Classes/
+
