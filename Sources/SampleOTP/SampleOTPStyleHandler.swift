@@ -16,7 +16,7 @@ struct SampleOTPStyleHandler: SampleOTPStyleHandlerProtocol {
         self.uiModel = uiModel
     }
 
-    var getTypingStyle: TypingOTPStyle? {
+    var getTypingStyle: SampleOTPViewUIModel.TypingOTPStyle? {
         uiModel.typingOTPStyle
     }
     

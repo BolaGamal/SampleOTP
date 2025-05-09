@@ -7,20 +7,22 @@
 
 import UIKit
 
-//MARK: Typing Styles
-public enum TypingOTPStyle {
-    case active, focused
-}
 
 //MARK: - UIModel
-public struct SampleOTPViewUIModel {
-    
+public struct SampleOTPViewUIModel: Equatable {
+    //MARK: Enums
     public enum AnimationOTP {
         case pulse, fadeIn, bounce
     }
     
+    public enum TypingOTPStyle {
+        case active, focused
+    }
+    
+    //MARK: Properties
     public let length: Int
     public let space: CGFloat
+    public let layoutDirection: UISemanticContentAttribute
     
     //textField attribute
     public let font: UIFont
@@ -51,6 +53,7 @@ public struct SampleOTPViewUIModel {
     public init(
         length: Int = 5,
         space: CGFloat = 10,
+        layoutDirection: UISemanticContentAttribute = .forceLeftToRight,
         font: UIFont = UIFont.systemFont(ofSize: 18),
         textColor: UIColor = .black,
         tintColor: UIColor? = nil,
@@ -74,6 +77,7 @@ public struct SampleOTPViewUIModel {
     {
         self.length = length
         self.space = space
+        self.layoutDirection = layoutDirection
         self.font = font
         self.textColor = textColor
         self.tintColor = tintColor

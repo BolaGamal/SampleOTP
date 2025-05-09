@@ -27,6 +27,8 @@ public struct SampleOTPViewWrapper: UIViewRepresentable {
     }
 
     public func updateUIView(_ uiView: SampleOTPView, context: Context) {
-        uiView.configure(with: model)
+        if uiView.model != model {
+            uiView.configure(with: model)
+        }
     }
 }

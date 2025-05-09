@@ -5,7 +5,7 @@ class MockOTPDelegate: SampleOTPTextFieldDelegate {
     
     var didCallBackspace = false
 
-    func textFieldDidEnterBackspace(_ textField: SampleOTP.SampleOTPTextField) {
+    func textFieldDidEnterBackspace(_ textField: SampleOTPTextField) {
         didCallBackspace = true
     }
 }

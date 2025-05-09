@@ -104,6 +104,7 @@ To fully customize the OTP input field, use `SampleOTPViewUIModel`:
 let otpViewModel = SampleOTPViewUIModel(
     length: 6,                            // Number of OTP digits
     space: 10,                            // Spacing between OTP fields
+    layoutDirection: .unspecified,        // RTL (Right-to-Left) Support
     font: .systemFont(ofSize: 18),        // Font for OTP input
     textColor: .black,                    // Color of entered text
     tintColor: .black,                    // Cursor color
@@ -191,9 +192,9 @@ inside the `Example` directory.
 
 ## 💡 Compatibility
 
-- ✅ iOS 10.0+ for UIKit
+- ✅ iOS 12.0+ for UIKit
 - ✅ iOS 13.0+ for SwiftUI
-- ✅ Supports both CocoaPods & Swift Package Manager (SPM)
+- ✅ Supports both **CocoaPods** & **Swift Package Manager (SPM)**
 
 ---
 

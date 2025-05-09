@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "D219E046-0B03-437D-BC7D-22F0AF98B360",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:SampleOTP.xcodeproj",
+        "identifier" : "607FACE41AFB9204008FA782",
+        "name" : "SampleOTP_Tests"
+      }
+    }
+  ],
+  "version" : 1
+}

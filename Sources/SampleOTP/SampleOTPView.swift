@@ -7,24 +7,25 @@
 
 import UIKit
 
-
-public class SampleOTPView: UIView {
-    // MARK: - Private Properties -
+@IBDesignable
+@objc public class SampleOTPView: UIView {
+    // MARK: - Private Properties
     private let stackView = UIStackView()
     private(set) var debounceTimer: Timer?
     private(set) var styleHandler: SampleOTPStyleHandlerProtocol?
     private(set) var animationHandler: SampleOTPAnimationHandlerProtocol?
     private(set) var textFields: [SampleOTPTextField] = []
+    private(set) var model: SampleOTPViewUIModel?
     
     public var didFinishEnteringOTP: ((String) -> Void)?
     
     // MARK: - Init
-    public override init(frame: CGRect) {
+    @objc public override init(frame: CGRect) {
         super.init(frame: frame)
         setupStackView()
     }
     
-    public required init?(coder: NSCoder) {
+    @objc public required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupStackView()
     }
@@ -34,9 +35,11 @@ public class SampleOTPView: UIView {
     }
     
     public func configure(with uiModel: SampleOTPViewUIModel) {
+        self.model = uiModel
         self.styleHandler = SampleOTPStyleHandler(uiModel: uiModel)
         self.animationHandler = SampleOTPAnimationHandler(uiModel: uiModel)
         stackView.spacing = uiModel.space
+        stackView.semanticContentAttribute = uiModel.layoutDirection
         stackView.subviews.forEach { $0.removeFromSuperview() }
         textFields.removeAll()
         
@@ -51,9 +54,9 @@ public class SampleOTPView: UIView {
     }
 }
 
-//MARK: - Private Handler -
-extension SampleOTPView {
-    private func setupStackView() {
+// MARK: - Configuration
+private extension SampleOTPView {
+    func setupStackView() {
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
         addSubview(stackView)
@@ -65,19 +68,22 @@ extension SampleOTPView {
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
-    
-    @objc private func textFieldDidChange(_ textField: SampleOTPTextField) {
+}
+
+// MARK: - Input Handling
+private extension SampleOTPView {
+    @objc func textFieldDidChange(_ textField: SampleOTPTextField) {
         handleTextFieldInput(textField)
     }
     
-    private func handleTextFieldInput(_ textField: SampleOTPTextField) {
+    func handleTextFieldInput(_ textField: SampleOTPTextField) {
         guard let text = textField.text, text.count == 1 else { return }
         animationHandler?.applyAnimation(to: textField)
         moveFocusToFirstEmptyField(for: textField)
         debounceCompletionCheck()
     }
-    
-    private func debounceCompletionCheck() {
+
+    func debounceCompletionCheck() {
         debounceTimer?.invalidate()
         debounceTimer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false) { [weak self] _ in
             guard let self = self else { return }
@@ -87,8 +93,11 @@ extension SampleOTPView {
             }
         }
     }
-    
-    private func moveFocusToFirstEmptyField(for textField: SampleOTPTextField) {
+}
+
+// MARK: - Navigation (Next/Previous)
+private extension SampleOTPView {
+    func moveFocusToFirstEmptyField(for textField: SampleOTPTextField) {
         if let nextField = textFields.first(where: { $0.text?.isEmpty ?? true }) {
             nextField.becomeFirstResponder()
         } else {
@@ -96,7 +105,7 @@ extension SampleOTPView {
         }
     }
     
-    private func moveFocusToNextField(for textField: SampleOTPTextField) {
+    func moveFocusToNextField(for textField: SampleOTPTextField) {
         guard let index = textFields.firstIndex(of: textField) else { return }
         if index < textFields.count - 1 {
             textFields[index + 1].becomeFirstResponder()
@@ -104,22 +113,25 @@ extension SampleOTPView {
             textField.resignFirstResponder()
         }
     }
-    
-    private func moveFocusToPreviousField(for textField: SampleOTPTextField) {
+
+    func moveFocusToPreviousField(for textField: SampleOTPTextField) {
         if let previousFieldIndex = textFields.firstIndex(of: textField), previousFieldIndex > 0 {
             let previousField = textFields[previousFieldIndex - 1]
             previousField.text = ""
             previousField.becomeFirstResponder()
         }
     }
-    
-    private func changeStyleForActiveField(for textField: SampleOTPTextField) {
-        guard let typingStyle = styleHandler?.getTypingStyle, typingStyle == .active else { return }
-        self.styleHandler?.applyStyle(to: textField, isFocused: false)
+}
+
+// MARK: - Validation
+extension SampleOTPView {
+    public func isValidOTP() -> Bool {
+        let otp = getOTP()
+        return otp.count == textFields.count && otp.allSatisfy { $0.isNumber }
     }
 }
 
-//MARK: - Public Functions -
+//MARK: - Public Functions
 extension SampleOTPView {
     public func clearFields() {
         textFields.forEach {
@@ -155,14 +167,9 @@ extension SampleOTPView {
             didFinishEnteringOTP?(getOTP())
         }
     }
-    
-    public func isValidOTP() -> Bool {
-        let otp = getOTP()
-        return otp.count == textFields.count && otp.allSatisfy { $0.isNumber }
-    }
 }
 
-//MARK: - UITextFieldDelegate -
+//MARK: - UITextFieldDelegate
 extension SampleOTPView: UITextFieldDelegate {
     
     public func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -176,7 +183,6 @@ extension SampleOTPView: UITextFieldDelegate {
     }
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        guard let textField = textField as? SampleOTPTextField else { return false }
         textField.resignFirstResponder()
         return true
     }
@@ -229,7 +235,7 @@ extension SampleOTPView: UITextFieldDelegate {
     }
 }
 
-//MARK: - SampleOTPTextFieldDelegate -
+//MARK: - SampleOTPTextFieldDelegate
 extension SampleOTPView: SampleOTPTextFieldDelegate {
     
     func textFieldDidEnterBackspace(_ textField: SampleOTPTextField) {
@@ -237,5 +243,10 @@ extension SampleOTPView: SampleOTPTextFieldDelegate {
         textField.text = ""
         if text?.isEmpty ?? true { moveFocusToPreviousField(for: textField) }
         changeStyleForActiveField(for: textField)
+    }
+    
+    private func changeStyleForActiveField(for textField: SampleOTPTextField) {
+        guard let typingStyle = styleHandler?.getTypingStyle, typingStyle == .active else { return }
+        self.styleHandler?.applyStyle(to: textField, isFocused: false)
     }
 }

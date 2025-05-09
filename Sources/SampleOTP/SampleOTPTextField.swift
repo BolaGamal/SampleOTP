@@ -34,12 +34,12 @@ class SampleOTPTextField: UITextField {
         return action == #selector(UIResponderStandardEditActions.paste(_:))
     }
     
-    private func setup(with uiModel: SampleOTPViewUIModel) {
+    func setup(with uiModel: SampleOTPViewUIModel) {
         self.font = uiModel.font
-        self.textAlignment = uiModel.textAlignment
         self.textColor = uiModel.textColor
         self.placeholder = uiModel.placeholder
         self.keyboardType = uiModel.keyboardType
+        self.textAlignment = uiModel.textAlignment
         self.isSecureTextEntry = uiModel.isSecureTextEntry
         self.backgroundColor = uiModel.fieldBackgroundColor
         self.layer.borderWidth = uiModel.borderWidth

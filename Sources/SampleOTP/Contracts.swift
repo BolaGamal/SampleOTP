@@ -13,7 +13,7 @@ protocol SampleOTPTextFieldDelegate: AnyObject {
 
 // MARK: - Style Handler Protocol
 protocol SampleOTPStyleHandlerProtocol {
-    var getTypingStyle: TypingOTPStyle? { get }
+    var getTypingStyle: SampleOTPViewUIModel.TypingOTPStyle? { get }
     func applyStyle(to textField: SampleOTPTextField, isFocused: Bool)
 }
 
