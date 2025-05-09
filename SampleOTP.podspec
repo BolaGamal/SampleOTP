@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'BolaGamal' => 'bola.gamal222@gmail.com' }
   s.source           = { :git => 'https://github.com/BolaGamal/SampleOTP.git', :tag => s.version.to_s }
-  s.social_media_url = 'linkedin.com/in/pola-gamal-53438322a/'
+  s.social_media_url = 'linkedin.com/in/pola-gamal-53438322a'
   s.source_files     = 'Sources/SampleOTP/**/*.{swift}'
   s.swift_version    = '5.5'
   s.ios.deployment_target = '12.0'
