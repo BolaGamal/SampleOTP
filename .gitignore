@@ -41,7 +41,6 @@ Podfile.lock
 
 # Build artifacts
 *.xcworkspace
-*.xcodeproj
 *.xcuserdata
 DerivedData/
 build/

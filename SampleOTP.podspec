@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SampleOTP'
-  s.version          = '0.3.4'
+  s.version          = '0.3.5'
   s.summary          = 'A customizable OTP input field for iOS.'
   s.description      = <<-DESC
     SampleOTP simplifies the implementation of one-time password (OTP) input fields in iOS apps.
