@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002C63D8326BFF041CAC6C87 /* Pods_SampleOTP_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28AC4841EA680FB0CD41C7CB /* Pods_SampleOTP_Tests.framework */; };
 		04051ECB2DC99D6F00451D97 /* SampleOTPTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04051EC42DC99D5A00451D97 /* SampleOTPTextFieldTests.swift */; };
 		04051ECC2DC99D6F00451D97 /* SampleOTPAnimationHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04051EC22DC99D5A00451D97 /* SampleOTPAnimationHandlerTests.swift */; };
 		04051ECD2DC99D6F00451D97 /* SampleOTPStyleHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04051EC32DC99D5A00451D97 /* SampleOTPStyleHandlerTests.swift */; };
@@ -31,8 +32,7 @@
 		0489AC982DCE61F80009C461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489AC942DCE61F80009C461 /* ViewController.swift */; };
 		0489AC992DCE61F80009C461 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0489AC912DCE61F80009C461 /* LaunchScreen.xib */; };
 		0489AC9B2DCE61F80009C461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0489AC932DCE61F80009C461 /* Main.storyboard */; };
-		5907C157DE78F4A37CF84074 /* Pods_SampleOTP_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD36D97614BC830FA82BD80A /* Pods_SampleOTP_Tests.framework */; };
-		7C64BE2F6642825E420B74CA /* Pods_SampleOTP_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E71257C784F72531AFFEC0D /* Pods_SampleOTP_Example.framework */; };
+		F72565F408477227F75B3006 /* Pods_SampleOTP_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8954C0C0B5D01B6B467E85AF /* Pods_SampleOTP_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +61,8 @@
 		0425B8172DCA538E0024D2C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		046546112DCE2682001741E8 /* Contracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contracts.swift; sourceTree = "<group>"; };
 		046B55B02DCC1E7C009742AD /* SampleOTPTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SampleOTPTestPlan.xctestplan; sourceTree = "<group>"; };
-		0475573F2DCB533700468F81 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		047557432DCBAFDC00468F81 /* sampleOtpGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sampleOtpGif.gif; sourceTree = "<group>"; };
+		047DCDC72DCF61A0006AC25D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		047DCDC82DCF61A0006AC25D /* sampleOtpGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sampleOtpGif.gif; sourceTree = "<group>"; };
 		0489AC8D2DCE61F80009C461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0489AC8E2DCE61F80009C461 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0489AC8F2DCE61F80009C461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,16 +70,16 @@
 		0489AC922DCE61F80009C461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0489AC942DCE61F80009C461 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04CF507D2DCA905100D5EBBD /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = SOURCE_ROOT; };
-		0E5EEB2FF468E91639A236FB /* Pods-SampleOTP_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleOTP_Tests.release.xcconfig"; path = "Target Support Files/Pods-SampleOTP_Tests/Pods-SampleOTP_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		32B66C1079ED8EA509F50E08 /* Pods-SampleOTP_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleOTP_Example.release.xcconfig"; path = "Target Support Files/Pods-SampleOTP_Example/Pods-SampleOTP_Example.release.xcconfig"; sourceTree = "<group>"; };
-		5E71257C784F72531AFFEC0D /* Pods_SampleOTP_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleOTP_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		103778E1A9F2A78279120E52 /* Pods-SampleOTP_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleOTP_Example.debug.xcconfig"; path = "Target Support Files/Pods-SampleOTP_Example/Pods-SampleOTP_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		1A111F879D13CB04C24CC697 /* Pods-SampleOTP_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleOTP_Example.release.xcconfig"; path = "Target Support Files/Pods-SampleOTP_Example/Pods-SampleOTP_Example.release.xcconfig"; sourceTree = "<group>"; };
+		28AC4841EA680FB0CD41C7CB /* Pods_SampleOTP_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleOTP_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* SampleOTP_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleOTP_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACE51AFB9204008FA782 /* SampleOTP_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleOTP_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		625B4CAD85FA61CD74101E8F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		83D40776495930CA6C589484 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		9CC9C57D6B9D44B1F5BCB2F9 /* Pods-SampleOTP_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleOTP_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SampleOTP_Tests/Pods-SampleOTP_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		AD36D97614BC830FA82BD80A /* Pods_SampleOTP_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleOTP_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF1F3E4AB8B371B844F8FCF7 /* Pods-SampleOTP_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleOTP_Example.debug.xcconfig"; path = "Target Support Files/Pods-SampleOTP_Example/Pods-SampleOTP_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8954C0C0B5D01B6B467E85AF /* Pods_SampleOTP_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleOTP_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94E1B135F19D8CF97EA9A08F /* Pods-SampleOTP_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleOTP_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SampleOTP_Tests/Pods-SampleOTP_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9AE40BABF5BA91EBE7151059 /* Pods-SampleOTP_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleOTP_Tests.release.xcconfig"; path = "Target Support Files/Pods-SampleOTP_Tests/Pods-SampleOTP_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C64BE2F6642825E420B74CA /* Pods_SampleOTP_Example.framework in Frameworks */,
+				F72565F408477227F75B3006 /* Pods_SampleOTP_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5907C157DE78F4A37CF84074 /* Pods_SampleOTP_Tests.framework in Frameworks */,
+				002C63D8326BFF041CAC6C87 /* Pods_SampleOTP_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,19 +156,19 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		047557412DCB533700468F81 /* Resources */ = {
+		047DCDC92DCF61A0006AC25D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0475573F2DCB533700468F81 /* Images.xcassets */,
-				047557432DCBAFDC00468F81 /* sampleOtpGif.gif */,
+				047DCDC72DCF61A0006AC25D /* Images.xcassets */,
+				047DCDC82DCF61A0006AC25D /* sampleOtpGif.gif */,
 			);
-			name = Resources;
-			path = ../Resources;
-			sourceTree = SOURCE_ROOT;
+			path = Resources;
+			sourceTree = "<group>";
 		};
 		0489AC8C2DCE61640009C461 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				047DCDC92DCF61A0006AC25D /* Resources */,
 				0489AC952DCE61F80009C461 /* SampleOTP */,
 			);
 			name = Example;
@@ -187,15 +187,6 @@
 			path = SampleOTP;
 			sourceTree = "<group>";
 		};
-		1AD89651E93A0E8A8C22972F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5E71257C784F72531AFFEC0D /* Pods_SampleOTP_Example.framework */,
-				AD36D97614BC830FA82BD80A /* Pods_SampleOTP_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -203,10 +194,9 @@
 				041262032DC990E300737FFD /* Sources */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				04051ECA2DC99D5A00451D97 /* Tests */,
-				047557412DCB533700468F81 /* Resources */,
 				607FACD11AFB9204008FA782 /* Products */,
 				A757BFAA6E256000D514EFDA /* Pods */,
-				1AD89651E93A0E8A8C22972F /* Frameworks */,
+				C96C752615DDA74AEBDF3285 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -233,12 +223,21 @@
 		A757BFAA6E256000D514EFDA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AF1F3E4AB8B371B844F8FCF7 /* Pods-SampleOTP_Example.debug.xcconfig */,
-				32B66C1079ED8EA509F50E08 /* Pods-SampleOTP_Example.release.xcconfig */,
-				9CC9C57D6B9D44B1F5BCB2F9 /* Pods-SampleOTP_Tests.debug.xcconfig */,
-				0E5EEB2FF468E91639A236FB /* Pods-SampleOTP_Tests.release.xcconfig */,
+				103778E1A9F2A78279120E52 /* Pods-SampleOTP_Example.debug.xcconfig */,
+				1A111F879D13CB04C24CC697 /* Pods-SampleOTP_Example.release.xcconfig */,
+				94E1B135F19D8CF97EA9A08F /* Pods-SampleOTP_Tests.debug.xcconfig */,
+				9AE40BABF5BA91EBE7151059 /* Pods-SampleOTP_Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C96C752615DDA74AEBDF3285 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8954C0C0B5D01B6B467E85AF /* Pods_SampleOTP_Example.framework */,
+				28AC4841EA680FB0CD41C7CB /* Pods_SampleOTP_Tests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,11 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SampleOTP_Example" */;
 			buildPhases = (
-				D3C406F02111CBB668FCAEDD /* [CP] Check Pods Manifest.lock */,
+				05B37802A2606AB75E940A7E /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				EAE0BEDB8971E0A222794D5E /* [CP] Embed Pods Frameworks */,
+				BCF4A51D07D2AB42C3499391 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,7 +266,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SampleOTP_Tests" */;
 			buildPhases = (
-				8C16840A3CC7CB134D453E89 /* [CP] Check Pods Manifest.lock */,
+				A60150D16D51B841CABA6010 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -343,29 +342,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8C16840A3CC7CB134D453E89 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SampleOTP_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D3C406F02111CBB668FCAEDD /* [CP] Check Pods Manifest.lock */ = {
+		05B37802A2606AB75E940A7E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -387,7 +364,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EAE0BEDB8971E0A222794D5E /* [CP] Embed Pods Frameworks */ = {
+		A60150D16D51B841CABA6010 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SampleOTP_Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCF4A51D07D2AB42C3499391 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -586,7 +585,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF1F3E4AB8B371B844F8FCF7 /* Pods-SampleOTP_Example.debug.xcconfig */;
+			baseConfigurationReference = 103778E1A9F2A78279120E52 /* Pods-SampleOTP_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SampleOTP/Info.plist;
@@ -605,7 +604,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32B66C1079ED8EA509F50E08 /* Pods-SampleOTP_Example.release.xcconfig */;
+			baseConfigurationReference = 1A111F879D13CB04C24CC697 /* Pods-SampleOTP_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SampleOTP/Info.plist;
@@ -624,7 +623,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CC9C57D6B9D44B1F5BCB2F9 /* Pods-SampleOTP_Tests.debug.xcconfig */;
+			baseConfigurationReference = 94E1B135F19D8CF97EA9A08F /* Pods-SampleOTP_Tests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -655,7 +654,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E5EEB2FF468E91639A236FB /* Pods-SampleOTP_Tests.release.xcconfig */;
+			baseConfigurationReference = 9AE40BABF5BA91EBE7151059 /* Pods-SampleOTP_Tests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
